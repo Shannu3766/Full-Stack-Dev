@@ -7,13 +7,37 @@
     <style>
         body {
             display: flex;
-            justify-content: center;
+            flex-direction: column;
             align-items: center;
             min-height: 100vh;
             margin: 0;
             background-color: #f0f0f0;
-            padding: 20px;
-            box-sizing: border-box;
+            color: #000;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .dark-theme {
+            background-color: #121212;
+            color: #fff;
+        }
+        .navbar {
+            width: 100%;
+            background-color: #ccc;
+            padding: 10px;
+            display: flex;
+            justify-content: flex-end;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .theme-toggle {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 8px 16px;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        .theme-toggle:hover {
+            background-color: #555;
         }
         @media (min-width: 768px) {
             .card {
@@ -44,6 +68,16 @@
             padding: 20px;
             color: #fff;
         }
+        .dark-theme .card {
+            background: #333;
+            box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+        }
+        .dark-theme .card-content {
+            color: #ddd;
+        }
+        .dark-theme .card-text {
+            color: #bbb;
+        }
         .card-title {
             font-size: 1.5em;
             margin: 0 0 10px;
@@ -55,16 +89,19 @@
     </style>
 </head>
 <body>
+    <nav class="navbar">
+        <button class="theme-toggle" onclick="document.body.classList.toggle('dark-theme')">Toggle Theme</button>
+    </nav>
     <div class="card">
         <img src="https://imgs.search.brave.com/HPF6n9MZoE0gVkGGh1UUlg1KMPkUArVhbKORR2NTn0M/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXItaG91c2Uu/Y29tL2RhdGEvb3V0/LzYvd2FsbHBhcGVy/MnlvdV8xMTU5NTYu/anBn" alt="Card Image" />
         <div class="card-content">
-            <h2 class="card-title">Merecedes Benz</h2>
+            <h2 class="card-title">Mercedes Benz</h2>
             <p class="card-text">
-            Mercedes-Benz is a prestigious German automobile brand.
-            It is known for its luxury and innovation.
-            Established in 1926, it pioneered many automotive technologies.
-            From elegant sedans to potent sports cars, it offers a wide range.
-            Its slogan, "The Best or Nothing," signifies its commitment to excellence.
+                Mercedes-Benz is a prestigious German automobile brand.
+                It is known for its luxury and innovation.
+                Established in 1926, it pioneered many automotive technologies.
+                From elegant sedans to potent sports cars, it offers a wide range.
+                Its slogan, "The Best or Nothing," signifies its commitment to excellence.
             </p>
         </div>
     </div>
