@@ -4,81 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Responsive Card Component</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css">
     <style>
-        body {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            min-height: 100vh;
-            margin: 0;
-            background-color: #f0f0f0;
-            padding: 20px;
-            box-sizing: border-box;
-            color: #000;
-            transition: background 0.3s, color 0.3s;
-        }
-        .theme-toggle {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            padding: 10px 20px;
-            background: #333;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        .theme-toggle.light {
-            background: #fff;
-            color: #000;
-        }
         .card {
-            display: grid;
-            grid-template-rows: auto 1fr;
-            background: #ff0000;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            max-width: 300px;
-            width: 100%;
-            overflow: hidden;
-            transition: transform 0.3s;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
+            transition: transform 0.3s, box-shadow 0.3s;
         }
-        .card img {
-            width: 100%;
-            height: auto;
-        }
-        .card-content {
-            display: flex;
-            flex-direction: column;
-            padding: 20px;
-            color: #fff;
-        }
-        .card-title {
-            font-size: 1.5em;
-            margin: 0 0 10px;
-        }
-        .card-text {
-            font-size: 1em;
-            color: #ffffff;
-        }
-        .dark-mode {
-            background-color: #121212;
-            color: #fff;
-        }
-        .dark-mode .card {
-            background: #333;
-            box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
-        }
-        .dark-mode .card-content {
-            color: #ddd;
-        }
-        .dark-mode .card-text {
-            color: #bbb;
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
         }
     </style>
 </head>
