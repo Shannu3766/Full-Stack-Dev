@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Responsive Card Component</title>
     <style>
         body {
@@ -21,23 +21,28 @@
             }
         }
         .card {
+            display: grid;
+            grid-template-rows: auto 1fr;
             background: #ff0000;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
             max-width: 300px;
             width: 100%;
+            overflow: hidden;
             transition: transform 0.3s;
         }
         .card:hover {
-            transform: translateY(-10px);
+            transform: translateY(-30px);
         }
         .card img {
             width: 100%;
             height: auto;
         }
         .card-content {
+            display: flex;
+            flex-direction: column;
             padding: 20px;
+            color: #fff;
         }
         .card-title {
             font-size: 1.5em;
@@ -45,17 +50,23 @@
         }
         .card-text {
             font-size: 1em;
-            color: #333;
+            color: #ffffff;
         }
     </style>
 </head>
 <body>
     <div class="card">
-        <img src="https://via.placeholder.com/300x200" alt="Card Image">
+        <img src="https://imgs.search.brave.com/HPF6n9MZoE0gVkGGh1UUlg1KMPkUArVhbKORR2NTn0M/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXItaG91c2Uu/Y29tL2RhdGEvb3V0/LzYvd2FsbHBhcGVy/MnlvdV8xMTU5NTYu/anBn" alt="Card Image" />
         <div class="card-content">
-            <h2 class="card-title">Card Title</h2>
-            <p class="card-text">This is some example text to build on the card title and make up the bulk of the card's content.</p>
+            <h2 class="card-title">Merecedes Benz</h2>
+            <p class="card-text">
+            Mercedes-Benz is a prestigious German automobile brand.
+            It is known for its luxury and innovation.
+            Established in 1926, it pioneered many automotive technologies.
+            From elegant sedans to potent sports cars, it offers a wide range.
+            Its slogan, "The Best or Nothing," signifies its commitment to excellence.
+            </p>
         </div>
     </div>
 </body>
-</html></div>
+</html>
